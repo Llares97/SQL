@@ -1,0 +1,33 @@
+--Create a paint store data base
+
+CREATE TABLE paints(ID INTEGER PRIMARY KEY, MEDIUM TEXT, BRAND TEXT, AISLE INTEGER, PRICE INTEGER, COLOR TEXT ); 
+
+INSERT INTO paints VALUES (1, "oil", "winsor & Newton", 1,8, "Blue");
+INSERT INTO paints VALUES (2, "acrylic", "winsor & NewtCon", 3, 9, "Red");
+INSERT INTO paints VALUES (3, "water color", "winsor & Newton", 2,15, "Green");
+INSERT INTO paints VALUES (5, "semi-gloss", "winsor & Newton",5, 14, "Yellow");
+INSERT INTO paints VALUES (6,"semi-gloss", "winsor & Newton",7, 13, "Orange");
+INSERT INTO paints VALUES (7, "acrylic", "winsor & Newton", 8, 13, "Red");
+INSERT INTO paints VALUES (8, "water color", "winsor & Newton", 2, 6, "Purple");
+INSERT INTO paints VALUES (9, "gouche", "winsor & Newton", 3, 13, "Blue");
+INSERT INTO paints VALUES (10, "semi-gloss", "winsor & Newton", 2, 10, "Yellow");
+INSERT INTO paints VALUES (11, "oil", "winsor & newton", 1, 11, "Yellow");
+INSERT INTO paints VALUES (12, "acrylic", "winsor & newton", 4, 10, "Red");
+INSERT INTO paints VALUES (13,"gloss", "winsor & Newton", 3, 14, "Blue");
+INSERT INTO paints VALUES (14,"oil", "winsor & newton", 6, 7, "Green");
+INSERT INTO paints VALUES (15,"acrylic", "winsor & newton", 3, 16, "Blue");
+
+
+--display the paint ordered by price.
+
+SELECT SUM (PRICE)FROM paints;
+
+--display the paint by the aisle it is located in.
+
+Select * FROM paints ORDER BY AISLE;
+
+-- display pain that costs less than 10 dollars.
+
+SELECT * FROM paints WHERE PRICE < 10 ORDER BY AISLE;
+Select SUM (PRICE) FROM paints;
+
